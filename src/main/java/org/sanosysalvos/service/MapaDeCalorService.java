@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@SuppressWarnings("null")
 public class MapaDeCalorService {
 
     private final MapaDeCalorRepository mapaDeCalorRepository;
@@ -63,4 +64,3 @@ public class MapaDeCalorService {
                 .build();
     }
 }
-

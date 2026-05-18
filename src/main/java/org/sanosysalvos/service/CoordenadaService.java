@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@SuppressWarnings("null")
 public class CoordenadaService {
 
     private final CoordenadaRepository coordenadaRepository;
@@ -86,4 +87,3 @@ public class CoordenadaService {
                 .build();
     }
 }
-

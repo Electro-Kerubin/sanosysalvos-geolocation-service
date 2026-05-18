@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@SuppressWarnings("null")
 public class RegionService {
 
     private final RegionRepository regionRepository;
@@ -59,4 +60,3 @@ public class RegionService {
                 .build();
     }
 }
-
