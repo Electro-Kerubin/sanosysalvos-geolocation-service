@@ -26,7 +26,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sanosysalvos-auth-service:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sanosysalvos-geolocation-service:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
