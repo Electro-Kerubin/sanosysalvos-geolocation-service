@@ -250,6 +250,6 @@ jobs:
             COMPOSE_EOF
 
             # --- Deploy ---
-            sudo docker compose pull auth-service
-            sudo docker compose up -d --no-deps auth-service
+            sudo docker compose pull geolocation-service
+            sudo docker compose up -d --no-deps geolocation-service
             sudo docker image prune -f
