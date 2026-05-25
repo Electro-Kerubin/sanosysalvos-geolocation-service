@@ -251,6 +251,9 @@ jobs:
                 name: sanosysalvos-network
             COMPOSE_EOF
 
+            # --- Asegurar que geolocation_db existe (init-db.sql solo corre en init fresco) ---
+            sudo docker exec sanosysalvos-postgres psql -U ${DB_USER} -c "CREATE DATABASE geolocation_db;" 2>/dev/null || true
+
             # --- Deploy ---
             sudo docker compose pull geolocation-service
             sudo docker compose up -d --no-deps --force-recreate geolocation-service
