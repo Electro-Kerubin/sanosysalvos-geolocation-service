@@ -194,6 +194,7 @@ jobs:
                   GEO_DB_URL: jdbc:postgresql://postgres:5432/geolocation_db
                   GEO_DB_USER: ${DB_USER}
                   GEO_DB_PASSWORD: ${DB_PASSWORD}
+                  JWT_SECRET: ${JWT_SECRET}
                   EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka
                 depends_on:
                   postgres:
