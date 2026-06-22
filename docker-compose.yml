@@ -45,7 +45,7 @@ services:
     container_name: sanosysalvos-geolocation-service
     restart: unless-stopped
     ports:
-      - "8084:8084"
+      - "8082:8082"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sanosysalvos
       SPRING_DATASOURCE_USERNAME: postgres
@@ -59,7 +59,9 @@ services:
       postgres:
         condition: service_healthy
       rabbitmq:
-        condition: service_healthy
+        condition: service_started
+      eureka-server:
+        condition: service_started
 
 volumes:
   postgres_data:
